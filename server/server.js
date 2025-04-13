@@ -14,7 +14,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://swasth-verify.vercel.app',  
+  origin: '*',  
   methods: ['GET', 'POST'],           
 }));
 app.use(express.json());
