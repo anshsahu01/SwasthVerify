@@ -1,78 +1,116 @@
-Swasth Verify
-Swasth Verify is a full-stack web application that helps users identify harmful chemicals in products by analyzing the list of ingredients from an image
+# 🌿 Swasth Verify
 
-1)Description
-Many products—especially cosmetics and packaged food—contain ingredients that are hard to understand. Swasth Verify makes it easy for users to check whether a product contains any harmful chemicals.
+Swasth Verify is a full-stack web application that helps users identify harmful chemicals in products by analyzing the ingredient list from an image.
 
-2)How it works:
+🔗 **Live Demo**: [https://swasth-verify.vercel.app/](https://swasth-verify.vercel.app/)  
+📹 **Demo Video**: [Watch on YouTube](https://youtu.be/uvyGF9YVhX8)
 
-The user uploads an image of the product's ingredients.
+---
 
-The app extracts text from the image using OCR (Optical Character Recognition).
+## 📖 Description
 
-It compares the extracted text with a list of harmful chemicals stored in MongoDB.
+Many consumer products—especially cosmetics and packaged foods—contain ingredients that are difficult to understand. **Swasth Verify** simplifies this by allowing users to scan product labels and instantly check for harmful chemicals.
 
-If any harmful chemical is found, the app displays:
+---
 
- The name(s) of the harmful chemicals
+## ⚙️ How It Works
 
- The number of harmful chemicals detected
+1. **Image Upload**  
+   Users upload an image of a product's ingredient list.
 
-3)Features
-Image upload functionality
+2. **OCR Extraction**  
+   The app uses **Tesseract.js** for Optical Character Recognition (OCR) to extract text from the image.
 
-OCR-based text extraction
+3. **Chemical Analysis**  
+   Extracted ingredients are compared with a MongoDB database containing harmful chemicals.
 
-Comparison with a chemical database
+4. **Gemini API Integration**  
+   - A chatbot powered by the **Gemini API** provides detailed information about each harmful chemical.
+   - It suggests **safer alternatives** and explains potential **health risks**.
+   - Stays strictly within the domain—no irrelevant or off-topic responses.
 
-Real-time harmful chemical detection
+5. **PDF Report**  
+   Users can **download a report** of the detected harmful chemicals using **jsPDF**.
 
-Clean and user-friendly interface
+---
 
-4)Tech Stack
-Frontend:
+## 🚀 Features
 
-React.js
+- 📸 Image upload functionality  
+- 🔍 OCR-based text extraction  
+- 🧪 Detection of harmful chemicals  
+- 🧠 **Gemini chatbot** for insights & alternatives  
+- 🧾 Downloadable PDF report with **jsPDF**  
+- ⚡ Real-time chemical detection  
+- 🧼 Clean and user-friendly interface  
+- 🌐 Deployed online (Frontend + Backend)
 
-Axios
+---
 
-Tailwind CSS
+## 🛠 Tech Stack
 
-Backend:
+### Frontend
+- React.js  
+- Tailwind CSS  
+- Axios  
 
-Node.js
+### Backend
+- Node.js  
+- Express.js  
 
-Express.js
+### Database
+- MongoDB  
 
-Database:
+### Other Tools & Libraries
+- Tesseract.js (OCR)  
+- jsPDF (PDF report generation)  
+- Gemini API (Chemical info chatbot)  
+- Git & GitHub (Version Control)
 
-MongoDB
-
-5) Other Tools:
-
-Tesseract.js (for OCR)
-
-Git & GitHub for version control
-
-6) How to run the project
-  Start the Backend
-   cd server
-   npm install
-   node server.js
-
- Start the Frontend
-  cd client
-  npm install
-  npm run dev
-
-7) Future Improvements
-   Add barcode scanning for quicker input
-   Display safety ratings for each chemical
-   User login and ingredient scan history
-   Multi-language support
-
-8)  Contact
-   For suggestions or contributions, feel free to contact us:
-   Email: riteshkushwaha497@gmail.com anshsahu7705@gmail.com
+### Deployment
+- Frontend: [Vercel](https://vercel.com)  
+- Backend: [Render](https://render.com)
 
 
+
+## 🧪 How to Run Locally
+
+### Start Backend
+```bash
+cd server
+npm install
+node server.js
+```
+
+
+## 🖥️ Start Frontend
+```bash
+cd client
+npm install
+npm run dev
+```
+
+## 🔑 API Keys Required
+To run this project locally, you’ll need the following:
+
+MongoDB URI: Replace in your .env file for database connection.
+
+Gemini API Key: Required to interact with Gemini for chemical info.
+
+You can get it from Google AI Studio
+
+Create a .env file in both the client and server directories as needed.
+
+## 📈 Future Improvements
+🔍 Barcode scanning for faster input
+
+🛡️ Safety ratings for chemicals
+
+👤 User login & ingredient scan history
+
+
+## 📬 Contact
+For suggestions, questions, or contributions, feel free to reach out:
+
+📧 riteshkushwaha497@gmail.com
+📧 anshsahu7705@gmail.com
